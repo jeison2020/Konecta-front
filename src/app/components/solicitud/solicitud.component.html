@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">codigo</th>
+        <th scope="col">description</th>
+        <th scope="col">resumen</th>
+        <th scope="col">nombre del empleado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let solicitud of solicitud">
+        <td>
+            {{solicitud.codigo}}
+       </td>
+        <td>{{solicitud.descripcion}}</td>
+        <td>{{ solicitud.resumen}}</td>
+        <td>{{solicitud.empleado.nombre}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-outline-primary" (click)="crearSolicitud()" >Create Solicitud</button>
